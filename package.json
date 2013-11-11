@@ -1,7 +1,7 @@
 {
   "name": "array-jumper",
   "version": "0.0.1",
-  "description": "\"Jump forward or backward through an array by an index based on an item already in the array.\"",
+  "description": "Jump forward or backward through an array by an index based on an item already in the array.",
   "main": "array-jumper.js",
   "scripts": {
     "test": "node test.js"
