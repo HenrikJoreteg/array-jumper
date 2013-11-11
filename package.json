@@ -1,0 +1,23 @@
+{
+  "name": "array-jumper",
+  "version": "0.0.1",
+  "description": "\"Jump forward or backward through an array by an index based on an item already in the array.\"",
+  "main": "array-jumper.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/HenrikJoreteg/array-jumper"
+  },
+  "keywords": [
+    "util",
+    "array",
+    "index"
+  ],
+  "author": "Henrik Joreteg <henrik@andyet.net>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HenrikJoreteg/array-jumper/issues"
+  }
+}
