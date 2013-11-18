@@ -19,7 +19,7 @@ var arr = ['a', 'b', 'c', 'd', 'e', 'f', 'g'];
 
 
 // If non are specified jumper should return first
-jumper(arr); // returns 'b'
+jumper(arr); // returns 'a'
 
 // If no jump amount specified jumper should return
 // next item in array
@@ -41,6 +41,15 @@ jumper(arr, 'a', 10) // returns 'd'
 // Should loop around if given negative jump number that
 // is out of range
 jumper(arr, 'a', -10) // returns 'e'
+
+// should work for item not found with no jump value
+jumper(arr, 'z') // returns 'a'
+
+// should work for item not found with jump value 1
+jumper(arr, 'z', 1) // returns 'a'
+
+// should work for item not found with jump value 2
+jumper(arr, 'z', 2) // returns 'b'
 ```
 
 
@@ -58,6 +67,12 @@ And check out my book: http://humanjavascript.com
 run them with `npm test`
 
 read them here: [test.js](test.js)
+
+
+## changelog
+
+ - 1.0.0: no longer throwing errors, and now handling missing args better
+ - 0.0.1: initial release
 
 ## license
 

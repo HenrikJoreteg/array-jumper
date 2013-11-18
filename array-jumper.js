@@ -1,20 +1,27 @@
-module.exports = function jumper(array, currentItem, jump) {
+module.exports = function jumper(array, currentItem, jumpArg) {
     // fill in any missing
     if (arguments.length === 1) {
         currentItem = array[0];
-        jump = 1;
+        jump = 0;
     } else if (arguments.length === 2) {
         jump = 1;
+    } else {
+        jump = typeof jumpArg !== 'undefined' ? jumpArg : 1;
     }
     var len = array.length;
     var index = array.indexOf(currentItem);
     var newIndex;
 
-    // safety check
-    if (index === -1) throw new Error("Didn't find current item in array.");
-
-    // simplest route if it's simple
-    newIndex = index + jump;
+    // handle case where not found
+    if (index === -1) {
+        if (jump === 1) {
+            newIndex = 0;
+        } else {
+            newIndex = jump - 1;
+        }
+    } else {
+        newIndex = index + jump;
+    }
 
     // we jumped too far
     if (newIndex > (len - 1)) {
